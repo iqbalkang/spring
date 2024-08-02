@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Hello world</title>
+    </head>
+
+    <body th:object="${student}">
+        <h1>Student information</h1>
+        <p th:text="Hello + ', ' + Mr. + ' ' + *{firstName} + ' ' + *{lastName}" />
+        <p th:text="'How is the weather in ' + *{country} + ' ?'" />
+        <p th:text="*{favoriteLanguage} + ' is a very good choice.'" />
+        <ul>
+            <li th:each="system: *{favoriteSystem}" th:text="${system}" />
+        </ul>
+<!--        <p th:text="*{favoriteSystem} + ' is definitely one of the best systems.'" />-->
+    </body>
+
+</html>

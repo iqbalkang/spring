@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+
+<!--<p th:text="#{home.welcome}">Welcome to our grocery store!</p>-->
+<p th:text="'Current time is ' + ${date}" class="world" />
+
+</body>
+
+</html>
